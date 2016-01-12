@@ -3,15 +3,18 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "flow": "./node_modules/flow-bin/cli.js check .",
+    "lint": "git diff HEAD --name-only --diff-filter=ACM | grep '.js$' | xargs ./node_modules/eslint/bin/eslint.js --quiet",
+    "build-android": "cd android && ./gradlew assembleRelease --stacktrace; cd .."
   },
   "dependencies": {
-    "react-native": "^0.7.1",
-    "pigment": "latest"
+    "pigment": "0.0.5",
+    "react-native": "^0.18.0-rc"
   },
   "devDependencies": {
-    "babel-eslint": "latest",
-    "eslint": "latest",
-    "eslint-plugin-react": "latest"
+    "babel-eslint": "^5.0.0-beta6",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.14.0"
   }
 }
