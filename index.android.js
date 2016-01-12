@@ -1,24 +1,16 @@
-let React = require("react-native"),
-    Random = require("./app/random");
+/* @flow */
 
-let { AppRegistry, NavigatorIOS, StyleSheet } = React;
+import React from 'react-native';
+import RandomColor from './app/RandomColor';
 
-let styles = StyleSheet.create({
-    nav: { flex: 1 }
-});
+const {
+    AppRegistry
+} = React;
 
-let random = React.createClass({
+export default class Random extends React.Component {
     render() {
-        return (
-            <NavigatorIOS
-                style={styles.nav}
-                initialRoute={{
-                    title: "Tap for color",
-                    component: Random
-                }}
-            />
-        );
+        return <RandomColor />;
     }
-});
+}
 
-AppRegistry.registerComponent("random", () => random);
+AppRegistry.registerComponent('random', () => Random);
