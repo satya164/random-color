@@ -8,13 +8,13 @@
     "lint": "git diff HEAD --name-only --diff-filter=ACM | grep '.js$' | xargs ./node_modules/eslint/bin/eslint.js --quiet"
   },
   "dependencies": {
-    "pigment": "0.0.5",
-    "react-native": "^0.18.0-rc"
+    "pigment": "0.1.0",
+    "react-native": "^0.44.0"
   },
   "devDependencies": {
-    "babel-eslint": "^5.0.0-beta6",
-    "eslint": "^1.10.3",
-    "eslint-plugin-react": "^3.14.0",
-    "flow-bin": "^0.20.1"
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.0",
+    "flow-bin": "^0.45.0"
   }
 }
